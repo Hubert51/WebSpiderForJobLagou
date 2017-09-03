@@ -1,0 +1,1 @@
+from .lagou import lagouMethod
