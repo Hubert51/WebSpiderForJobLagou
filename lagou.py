@@ -72,7 +72,7 @@ def getInfo(position, company, source, jobList,ipList, index,pathOfChromedriver,
 						ipList.append(ip)
 
 					driverToGetDescription.close()
-					print("No.{} job is crawled failed".format(index))
+					print("No.{} job is crawled failed".format(index+1))
 					continue
 
 			description = driverToGetDescription.find_element_by_class_name("job_bt").get_attribute("innerHTML")
@@ -83,7 +83,7 @@ def getInfo(position, company, source, jobList,ipList, index,pathOfChromedriver,
 			if ip == "approveToUseSelfIp":
 				ipList.append(ip)
 			driverToGetDescription.close()
-			print("No.{} job is crawled failed".format(index))
+			print("No.{} job is crawled failed".format(index+1))
 			continue
 	print("No.{} job is crawled successfully".format(index+1))
 
