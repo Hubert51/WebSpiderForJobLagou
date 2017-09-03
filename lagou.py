@@ -39,7 +39,7 @@ def getInfo(position, company, source, jobList,ipList, index,pathOfChromedriver,
 	# open a new driver to deal url of description
 	# driverToGetDescription = webdriver.Chrome(pathOfChromedriver)
 	# use while loop will not stop until the proxy ip is valid
-	print("Crawling No.{:} job".format(index))
+	print("Crawling No.{:} job".format(index+1))
 	while True:
 		try:
 			# open a new driver to deal url of description
@@ -85,7 +85,7 @@ def getInfo(position, company, source, jobList,ipList, index,pathOfChromedriver,
 			driverToGetDescription.close()
 			print("No.{} job is crawled failed".format(index))
 			continue
-	print("No.{} job is crawled successfully".format(index))
+	print("No.{} job is crawled successfully".format(index+1))
 
 	# get content of description
 	description = parserDescription(description)
